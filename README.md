@@ -1,6 +1,6 @@
 # 🎓 Student Services System
 
-A dynamic web application for managing academic services, developed using **Java Server Pages (JSP)** and **Bootstrap 5**. The system features a role-based access control (RBAC) mechanism where Students, Teachers, and Admins access a unified platform with content tailored to their specific permissions.
+A dynamic web application for managing academic services, developed primarily using **Java Server Pages (JSP)** and **Bootstrap 5**. The system features a role-based access control (RBAC) mechanism where Students, Teachers, and Admins access a unified platform with content tailored to their specific permissions.
 
 ## 🌟 Key Features
 
@@ -21,6 +21,13 @@ A dynamic web application for managing academic services, developed using **Java
 
 ---
 
+## 🔒 Security & Data Management
+
+To ensure data integrity and user security, the system implements:
+* **Password Hashing:** Utilizes **Bcrypt** for secure password encryption before storing in the database.
+* **Session Management:** Uses **Java Sessions** and **Cookies** to maintain user authentication states across the application.
+* **Client-side Storage:** Implements **Local Storage** for enhancing user experience and temporary data persistence.
+
 ## 🛠️ Technical Stack
 
 * **Language:** Java
@@ -31,9 +38,9 @@ A dynamic web application for managing academic services, developed using **Java
 
 ## 📂 Project Structure
 
-* `bke/`: Contains backend Java classes for core logic (Login check, Registration, etc.)
+* `bke/`: Contains backend Java classes for core logic (Login check, Registration, Bcrypt hashing, etc.)
 * `login/`: Dedicated JSP files for authentication and user sessions.
 * `index.jsp`: The main entry point that dynamically renders content based on user roles.
 
 ---
-*This project was developed to demonstrate the implementation of role-based web systems using JSP.*
+*This project demonstrates the practical application of JSP for building functional, secure, and role-based web systems.*
