@@ -1,0 +1,205 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Dec 24, 2025, 11:13:45 AM
+    Author     : mix
+*/
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    background-color: transparent;
+    transition: background-color 0.8s ease-in-out;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.bgCarousel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    transition: opacity 0.8s ease-in-out, visibility 0.8s;
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+.bgCarousel img {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
+section {
+    height: 100vh;
+    width: 100%;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 250px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(20px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 20px;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.5s ease;
+}
+
+.imgmain {
+    width: 100%; margin-bottom: 20px;
+}
+.imgfil {
+    filter: brightness(0) invert(1);
+}
+.barblack {
+    border-top-color: black !important;
+}
+
+.nav-link-custom {
+    color: rgba(255,255,255,0.8);
+    padding: 12px;
+    display: block;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.nav-link-custom:hover, .nav-link-custom.active {
+    background: #0d6efd;
+    color: white !important;
+}
+
+.glass-box, .glass-box-an {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 15px 25px;
+    color: white;
+    position: absolute;
+    top: 30px;
+}
+.glass-box {
+    right: 50px;
+    text-align: right;
+}
+.glass-box-an {
+    left: 280px;
+    text-align: left;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 20px;
+    left: calc(50% + 125px);
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+    opacity: 0.8;
+    z-index: 10;
+    transition: opacity 0.5s;
+}
+
+.bounce-arrow {
+    font-size: 2.5rem;
+    animation: bounce 2s infinite;
+}
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Position the card down so it doesn't overlap the header */
+.main-section {
+    display: flex;
+    justify-content: center;
+    padding: 100px 20px 50px 20px; /* Top padding pushes the box down */
+}
+
+.content-card {
+    background: white;
+    border-radius: 30px;
+    padding: 40px;
+    width: 95%;
+    max-width: 1200px;
+}
+
+/* Announcements Styling */
+.announcement-item {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.2s;
+}
+
+.author-name { color: #007bff; font-weight: 700; }
+.author-pos { color: #666; font-size: 0.85rem; }
+.ann-preview { color: #444; font-size: 0.95rem; margin: 10px 0; }
+
+/* Calendar Sidebar Styling (The dark box) */
+.calendar-sidebar {
+    background: #333; /* Dark background from image */
+    color: white;
+    border-radius: 20px;
+    padding: 25px;
+    height: 100%;
+}
+
+.event-item {
+    border-bottom: 1px solid #444;
+    padding: 15px 0;
+}
+
+.event-date { color: #5bc0de; font-weight: bold; font-size: 0.9rem; }
+.event-info { font-size: 0.95rem; }
+.view-link { color: #5bc0de !important; text-decoration: none; font-size: 0.8rem; }
+
+/* Scrollbar for long lists */
+.announcement-container, .event-scroll {
+    max-height: 600px;
+    overflow-y: auto;
+}
+.line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.modal-content {
+    border-radius: 20px;
+    border: none;
+}

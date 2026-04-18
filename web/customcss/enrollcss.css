@@ -1,0 +1,125 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Dec 25, 2025, 4:19:02 PM
+    Author     : mix
+*/
+
+body {
+    background-color: rgb(230, 230, 230);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: white;
+    position: fixed;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+    padding: 20px;
+}
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+}
+.nav-link-custom {
+    padding: 12px;
+    color: #333;
+    text-decoration: none;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.nav-link-custom:hover {
+    background-color: #0d6efd;
+    color: white;
+}
+.nav-link-custom.active {
+    background-color: #0d6efd;
+    color: white;
+}
+.selection-card {
+    position: sticky;
+    top: 10px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    padding: 20px;
+}
+
+
+/* 1. Force the table row height to exactly 48px */
+#courseTable td {
+    height: 48px;
+    vertical-align: middle !important;
+    padding: 0 10px !important; /* Consistent horizontal spacing */
+}
+
+/* 2. Create a unified height container for all 3 states */
+.status-wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    
+    height: 32px;      /* Fixed height for the element itself */
+    min-width: 80px;   /* Stops the column from "shaking" when text changes */
+    
+    font-size: 0.85rem;
+    font-weight: 600;
+    line-height: 1;
+    margin: 0 auto;
+    border: 1px solid transparent; /* Keeps alignment perfect with buttons */
+}
+
+/* 3. Specific adjustment for the button to remove default Bootstrap margins */
+.btn-status {
+    padding: 0; /* Let status-wrapper handle the size */
+}
+
+.table-scroll-container {
+    max-height: 580px;    /* Adjust this height as needed */
+    overflow-y: auto;     /* Enables vertical scroll */
+    border: 1px solid #dee2e6; /* Bootstrap-style border color */
+    border-radius: 8px;   /* Rounded corners */
+    position: relative;
+}
+.search-container {
+    position: relative;
+}
+
+#searchDropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    max-height: 200px;
+    overflow-y: auto;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 1000;
+    display: none;
+    margin-top: 2px;
+}
+
+#searchDropdown.show {
+    display: block;
+}
+
+.dropdown-item-custom {
+    padding: 10px 15px;
+    cursor: pointer;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.dropdown-item-custom:hover {
+    background-color: #f8f9fa;
+}
+
+.student-id-badge {
+    font-weight: bold;
+    color: #0d6efd;
+    margin-right: 8px;
+}
