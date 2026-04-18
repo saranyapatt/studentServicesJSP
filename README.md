@@ -28,6 +28,17 @@ To ensure data integrity and user security, the system implements:
 * **Session Management:** Uses **Java Sessions** and **Cookies** to maintain user authentication states across the application.
 * **Client-side Storage:** Implements **Local Storage** for enhancing user experience and temporary data persistence.
 
+---
+
+## 🗄️ Database Setup
+
+To run this project locally, you need to import the database schema:
+1. Create a new MySQL database named `student_services` (or the name used in your config).
+2. Import the SQL dump file located at `/sql/database_dump.sql`.
+3. Update the database credentials in your Java connection class (e.g., `HomeBean.java` or `DBConnection.java`).
+
+---
+
 ## 🛠️ Technical Stack
 
 * **Language:** Java
