@@ -97,3 +97,20 @@ input[type="password"] {
     color: white;
 }
 
+/* ── Mobile ───────────────────────────────────────────────── */
+@media (max-width: 768px) {
+    body {
+        align-items: flex-start;
+        padding: 20px 15px;
+    }
+    .login-container {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    .main-content {
+        margin-left: 0 !important;
+        padding: 20px 12px;
+    }
+}
+

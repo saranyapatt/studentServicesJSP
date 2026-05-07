@@ -8,6 +8,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Home - KBTU Student Services</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -43,6 +44,8 @@
                 }
 
         %>
+        <button class="hamburger-btn" id="hamburgerBtn" onclick="toggleSidebar()">☰</button>
+        <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
         <div id="bgCarousel" class="bgCarousel carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active"><img src="./logo/bg1.jpg" alt="1"></div>
@@ -209,6 +212,10 @@
             document.getElementById('m-author').innerText = "By " + name + (pos ? " (" + pos + ")" : "");
             document.getElementById('m-content').innerHTML = content;
             new bootstrap.Modal(document.getElementById('announcementModal')).show();
+        }
+        function toggleSidebar() {
+            document.querySelector('.sidebar').classList.toggle('open');
+            document.getElementById('sidebarOverlay').classList.toggle('open');
         }
     </script>
 
