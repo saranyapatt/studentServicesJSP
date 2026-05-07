@@ -7,12 +7,12 @@
         return;
     }
 %>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ page import="java.sql.*" %>
 <%@ page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Admin - Account Management</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
@@ -41,6 +41,8 @@
 
     </head>
     <body style="background-color: #f8f9fa;">
+        <button class="hamburger-btn" id="hamburgerBtn" onclick="toggleSidebar()">☰</button>
+        <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
 
         <div class="sidebar shadow">
             <img src="./logo/logo.png" alt="Logo" style="width: 100%; margin-bottom: 20px;">
@@ -225,6 +227,10 @@
 
 
         <script>
+            function toggleSidebar() {
+                document.querySelector('.sidebar').classList.toggle('open');
+                document.getElementById('sidebarOverlay').classList.toggle('open');
+            }
             $(document).ready(function () {
                 $('#dob').datepicker({
                     format: 'dd-mm-yyyy',
